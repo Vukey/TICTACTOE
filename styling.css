@@ -1,0 +1,56 @@
+* *::befoe *::after{
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+}
+body{
+	height: 100vh;
+}
+.container{
+	display: flex;
+	align-items: flex-end;
+}
+.playboard{
+	/*border: 1px solid black;*/
+ 	
+	display: grid;
+	grid-template-columns: repeat(3, auto);
+	width: 300px;
+	height: 300px;
+	/*margin: 0 auto;*/
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.playboard > div{
+	width: 100px;
+	height: 100px;
+	font-size: 100px;
+	line-height: 100px;
+	text-align: center;
+}
+.playboard > div:hover{
+	background-color: #eee;
+	cursor: grab;
+}
+.playboard > div {
+border: 5px solid black;
+}
+.playboard > div:nth-child(3n+1){
+	border-left: none;
+}
+.playboard > div:nth-child(3n){
+	border-right: none;
+}
+
+.playboard > div:nth-child(1), .playboard > div:nth-child(2), .playboard > div:nth-child(3){
+	border-top: none;
+}
+.playboard > div:nth-child(7), .playboard > div:nth-child(8), .playboard > div:nth-child(9){
+	border-bottom: none;
+}
+
+.winners{
+	color: green;
+}
